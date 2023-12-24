@@ -6,38 +6,29 @@
 /*   By: ayaperce <ayaperce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 05:24:34 by ayaperce          #+#    #+#             */
-/*   Updated: 2023/12/22 23:41:25 by ayaperce         ###   ########.fr       */
+/*   Updated: 2023/12/24 03:51:22 by ayaperce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	*ft_rev_cpy(void *dest, const void *src, size_t n);
-
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	if (src == dest)
-		return (dest);
-	if (n)
-	{
-		if (dest > src && dest < src + n)
-			return (ft_rev_cpy(dest, src, n));
-		return (ft_memcpy(dest, src, n));
-	}
-	return (dest);
-}
+	char		*dst_char;
+	const char	*src_char = (const char *)src;
 
-static void	*ft_rev_cpy(void *dest, const void *src, size_t n)
-{
-	char	*dest_bytes;
-	char	*src_bytes;
-
-	dest_bytes = (char *)dest;
-	src_bytes = (char *)src;
-	while (n)
+	if (dst == NULL && src == NULL)
+		return (NULL);
+	dst_char = (char *)dst;
+	if (src_char < dst_char)
 	{
-		dest_bytes[n - 1] = src_bytes[n - 1];
-		n--;
+		while (n--)
+			*(dst_char + n) = *(src_char + n);
 	}
-	return (dest);
+	else
+	{
+		while (n--)
+			*dst_char++ = *src_char++;
+	}
+	return (dst);
 }
