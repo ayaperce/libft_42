@@ -6,7 +6,7 @@
 #    By: ayaperce <ayaperce@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/15 18:00:37 by xlebecq           #+#    #+#              #
-#    Updated: 2023/12/21 13:41:13 by ayaperce         ###   ########.fr        #
+#    Updated: 2023/12/26 21:22:56 by ayaperce         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,9 @@ SRC= 	ft_bzero.c \
 		ft_strmapi.c \
 		ft_striteri.c \
 
+SRCB =	ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstclear_bonus.c \
+		ft_lstdelone_bonus.c ft_lstiter_bonus.c ft_lstlast_bonus.c \
+		ft_lstmap_bonus.c ft_lstnew_bonus.c ft_lstsize_bonus.c
 
 OBJ = $(SRC:.c=.o)
 
