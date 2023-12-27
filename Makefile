@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ayaperce <ayaperce@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/11/15 18:00:37 by xlebecq           #+#    #+#              #
-#    Updated: 2023/12/26 21:22:56 by ayaperce         ###   ########.fr        #
+#    Created: 2023/12/27 02:52:20 by ayaperce          #+#    #+#              #
+#    Updated: 2023/12/27 02:52:23 by ayaperce         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,4 +84,4 @@ re: fclean all
 
 so:
 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(SRCB)
-	gcc -nostartfiles -shared -o libft.so $(OBJ) $(OBJB)
+	gcc -nostartfiles -shared -o li
