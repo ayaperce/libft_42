@@ -6,17 +6,16 @@
 /*   By: ayaperce <ayaperce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 21:09:50 by ayaperce          #+#    #+#             */
-/*   Updated: 2023/12/26 21:23:38 by ayaperce         ###   ########.fr       */
+/*   Updated: 2023/12/27 02:28:11 by ayaperce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del(void *)))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-    if (!lst)
+	if (!lst || !del)
 		return ;
-	if (del)
-		del(lst->content);
+	del(lst->content);
 	free(lst);
 }

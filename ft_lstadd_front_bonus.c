@@ -6,7 +6,7 @@
 /*   By: ayaperce <ayaperce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 20:56:20 by ayaperce          #+#    #+#             */
-/*   Updated: 2023/12/26 21:23:35 by ayaperce         ###   ########.fr       */
+/*   Updated: 2023/12/27 02:26:43 by ayaperce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!new || !lst)
-		return(NULL);
+		return ;
 	new->next = *lst;
 	*lst = new;
 }
